@@ -1,43 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# React + Vite
-=======
-# HS / Portfolio
->>>>>>> 40f4ea6e5d3edde238daac3697369d9ebadf0c86
+# Hardik Srivastava
 
-> Not a template. Not a tutorial project. Built from scratch.
+Final year CSE student who ships real products.
 
-## What's inside
-
-A personal portfolio that actually reflects how I work —
-GSAP animations, a cinematic loader, custom cursor,
-3D project previews, and zero Bootstrap.
-
-## Stack
-
-| Layer | Tech |
-|-------|------|
-| Frontend | React 18, Vite, Tailwind CSS v4 |
-| Animation | GSAP, ScrollTrigger, SplitText |
-| Scrolling | Lenis |
-| Deployment | Vercel |
-
-## Run it
-
-<<<<<<< HEAD
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Portfolio
->>>>>>> 99013b7b8f7afc2c2e0e698c2fa0d59630e1b97b
-=======
-```bash
-npm install && npm run dev
-```
-## Live
-
-→ [hardik-portfolio.vercel.app](https://hardik-portfolio.vercel.app)
+Not waiting to graduate to build things that matter —
+currently leading a four-person team on PlaceRise,
+a full-stack college placement platform in active use.
 
 ---
 
-*Designed & built by Hardik Srivastava — 2026*
->>>>>>> 40f4ea6e5d3edde238daac3697369d9ebadf0c86
+## What I've shipped
+
+**PlaceRise** — College placement management platform  
+JWT auth, QR attendance, bulk CSV import, NOC/LOR with e-signatures,
+analytics dashboard, in-app notifications with email fallback.  
+Led the team. Wrote the frontend. Reviewed every PR.
+
+**CampusBite** — Food ordering PWA for college canteens  
+Students order, staff manages, canteen runs smoother.  
+Firebase, real-time orders, multi-canteen support. Solo build.
+
+---
+
+## What I bring
+
+Code that ships, not code that sits in a repo waiting to be finished.
+
+Git workflow management, PR reviews, stakeholder communication,
+architecture decisions — alongside writing the frontend myself.
+
+---
+
+## Where to find me
+
+Portfolio  → hardik-srivastava.vercel.app  
+LinkedIn   → linkedin.com/in/hardik-srivastava033  
+GitHub     → github.com/Hardboy007  
+Email      → hardik77.aman@gmail.com
+
+---
+
+*Open to internships and full-stack roles.*  
+*I reply fast. Usually within a few hours.*
