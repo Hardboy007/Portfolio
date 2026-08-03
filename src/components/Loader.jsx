@@ -41,11 +41,10 @@ export default function Loader({ onComplete }) {
         "-=0.3",
       )
       // hold for a moment
-      .to({}, { duration: 0.4 })
-      // whole loader slides up and exits
+      .to({}, { duration: 0.2 })
       .to(loaderRef.current, {
         yPercent: -100,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power4.inOut",
         onComplete,
       });
