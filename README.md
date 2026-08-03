@@ -1,20 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
+=======
+# HS / Portfolio
+>>>>>>> 40f4ea6e5d3edde238daac3697369d9ebadf0c86
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Not a template. Not a tutorial project. Built from scratch.
 
-Currently, two official plugins are available:
+## What's inside
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A personal portfolio that actually reflects how I work —
+GSAP animations, a cinematic loader, custom cursor,
+3D project previews, and zero Bootstrap.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Tech |
+|-------|------|
+| Frontend | React 18, Vite, Tailwind CSS v4 |
+| Animation | GSAP, ScrollTrigger, SplitText |
+| Scrolling | Lenis |
+| Deployment | Vercel |
 
-## Expanding the ESLint configuration
+## Run it
 
+<<<<<<< HEAD
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 =======
 # Portfolio
 >>>>>>> 99013b7b8f7afc2c2e0e698c2fa0d59630e1b97b
+=======
+```bash
+npm install && npm run dev
+```
+## Live
+
+→ [hardik-portfolio.vercel.app](https://hardik-portfolio.vercel.app)
+
+---
+
+*Designed & built by Hardik Srivastava — 2026*
+>>>>>>> 40f4ea6e5d3edde238daac3697369d9ebadf0c86
