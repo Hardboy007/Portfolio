@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* ---- Design tokens: our whole color/type system lives here ---- */
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-ink: #0b0e14; /* base background */
+  --color-ink-soft: #12161f; /* raised panels/cards */
+  --color-paper: #e7e5e0; /* primary text */
+  --color-paper-dim: #8b8f99; /* secondary text */
+  --color-signal: #5eead4; /* teal accent - primary */
+  --color-warn: #f5a623; /* amber accent - secondary */
+  --color-line: #1f2430; /* hairline borders */
+}
+
+html,
+body {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-signal);
+  color: var(--color-ink);
+}
+
+/* visible keyboard focus everywhere - accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+}
+
+/* respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* remove jo abhi lagaya hai pehle - body::before aur body::after dono hatao */
+
+/* animated mesh gradient */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 80% 80% at 20% 10%,
+      rgba(94, 234, 212, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 60% at 80% 90%,
+      rgba(94, 234, 212, 0.05) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 50% 50% at 80% 20%,
+      rgba(245, 166, 35, 0.04) 0%,
+      transparent 60%
+    );
+  animation: meshMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes meshMove {
+  0% {
+    background:
+      radial-gradient(
+        ellipse 80% 80% at 20% 10%,
+        rgba(94, 234, 212, 0.07) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 60% at 80% 90%,
+        rgba(94, 234, 212, 0.05) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 50% at 80% 20%,
+        rgba(245, 166, 35, 0.04) 0%,
+        transparent 60%
+      );
+  }
+  100% {
+    background:
+      radial-gradient(
+        ellipse 80% 80% at 70% 80%,
+        rgba(94, 234, 212, 0.07) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 60% at 20% 20%,
+        rgba(94, 234, 212, 0.05) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 50% 50% at 30% 70%,
+        rgba(245, 166, 35, 0.04) 0%,
+        transparent 60%
+      );
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
