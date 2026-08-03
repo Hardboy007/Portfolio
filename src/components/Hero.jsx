@@ -49,7 +49,7 @@ export default function Hero() {
     const roleSplit = SplitText.create(roleRef.current, { type: "words" });
 
     // ---- ENTRANCE TIMELINE: plays once, top to bottom ----
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 0.5 });
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" }, delay: 1 });
 
     tl.to(promptRef.current, { duration: 1, text: "$ whoami", ease: "none" })
       .from(
