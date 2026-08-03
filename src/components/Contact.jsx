@@ -147,9 +147,6 @@ export default function Contact() {
           <p className="font-mono text-[11px] text-paper-dim/50">
             © 2026 Hardik Srivastava — Designed &amp; built by me.
           </p>
-          <p className="font-mono text-[11px] text-paper-dim/50">
-            React · GSAP · Tailwind · Lenis
-          </p>
         </div>
       </div>
     </section>
