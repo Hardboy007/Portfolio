@@ -198,7 +198,7 @@ export default function TechArsenal() {
         <div className="overflow-hidden mb-16">
           <h2
             ref={headingRef}
-            className="font-display font-semibold text-3xl md:text-5xl text-paper leading-[1.1] max-w-2xl"
+            className="font-display font-semibold text-2xl md:text-5xl text-paper leading-[1.1] max-w-2xl"
           >
             Tools I reach for when building real things.
           </h2>

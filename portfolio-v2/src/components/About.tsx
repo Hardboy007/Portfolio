@@ -140,7 +140,7 @@ export default function About() {
           <div className="overflow-hidden">
             <h2
               ref={headingRef}
-              className="font-display font-semibold text-3xl md:text-5xl text-paper leading-[1.1]"
+              className="font-display font-semibold text-2xl md:text-5xl text-paper leading-[1.1]"
             >
               I'm a CSE student who ships real products, not just assignments.
             </h2>

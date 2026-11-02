@@ -180,10 +180,7 @@ export default function Hero() {
             leadership.
           </p>
 
-          <div
-            ref={ctaRef}
-            className="flex flex-col sm:flex-row flex-wrap gap-3 mt-9"
-          >
+          <div ref={ctaRef} className="flex flex-row flex-wrap gap-3 mt-9">
             <MagneticButton
               className="px-6 py-3 rounded-full bg-signal text-[#0b0e14] font-mono text-sm font-medium"
               onClick={() =>

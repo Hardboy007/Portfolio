@@ -288,16 +288,14 @@ export default function Projects() {
       // Horizontal scroll
       ScrollTrigger.refresh();
       const container = horizontalRef.current;
-      if (container) {
-        const totalScroll = container.scrollWidth - window.innerWidth;
-
+      if (container && window.innerWidth >= 768) {
         gsap.to(container, {
-          x: () => -totalScroll,
+          x: () => -(container.scrollWidth - window.innerWidth),
           ease: "none",
           scrollTrigger: {
             trigger: container.parentElement,
             start: "top top",
-            end: () => `+=${totalScroll + window.innerHeight}`,
+            end: () => `+=${container.scrollWidth - window.innerWidth}`,
             scrub: 1,
             pin: true,
             anticipatePin: 1,
@@ -330,7 +328,7 @@ export default function Projects() {
         ref={containerRef}
         className="px-6 md:px-16 py-28 md:py-36 border-t border-line"
       >
-        <div className="w-full overflow-hidden">
+        <div className="w-full">
           <p className="font-mono text-xs tracking-widest text-signal mb-4">
             PROJECTS
           </p>
@@ -346,7 +344,7 @@ export default function Projects() {
 
           <div
             ref={horizontalRef}
-            className="flex gap-8 w-max pl-[10vw] pr-[20vw]"
+            className="hidden md:flex gap-8 w-max pl-[10vw] pr-[20vw]"
             style={{
               touchAction: "pan-x",
               overflowX: "auto",
@@ -360,7 +358,7 @@ export default function Projects() {
             {PROJECTS.map((p, index) => (
               <div
                 key={p.id}
-                className="project-block w-[60vw] max-w-4xl shrink-0"
+                className="project-block w-[85vw] max-w-5xl shrink-0 md:w-[85vw]"
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
@@ -470,6 +468,80 @@ export default function Projects() {
                       </span>
                     </div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="md:hidden space-y-14">
+            {PROJECTS.map((p, index) => (
+              <div key={p.id} className="project-block">
+                <div className="flex flex-wrap items-end justify-between gap-4 mb-8 pb-5 border-b border-line">
+                  <div className="flex flex-wrap items-end gap-2">
+                    <span className="font-mono text-[11px] text-paper-dim">
+                      {p.number}
+                    </span>
+                    <h3 className="font-display font-semibold text-2xl text-paper leading-none">
+                      {p.name}
+                    </h3>
+                    <span
+                      className="font-mono text-[11px]"
+                      style={{ color: p.tagColor }}
+                    >
+                      {p.tag}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-paper-dim"
+                      >
+                        <FiGithub />
+                      </a>
+                    )}
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-xs text-paper-dim"
+                      >
+                        <FiExternalLink />
+                      </a>
+                    )}
+                    <button
+                      onClick={() => setActiveProject(p)}
+                      className="font-mono text-xs px-3 py-1.5 rounded-full bg-signal text-[#0b0e14] font-medium"
+                    >
+                      Case Study →
+                    </button>
+                  </div>
+                </div>
+                <p className="text-paper-dim leading-relaxed mb-6 text-sm">
+                  {p.description}
+                </p>
+                <div
+                  className="rounded-xl border border-line overflow-hidden bg-ink-soft aspect-video relative mb-6"
+                  onClick={() => setActiveProject(p)}
+                >
+                  <Image
+                    src={p.preview}
+                    alt={p.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {p.stack.map((s) => (
+                    <span
+                      key={s}
+                      className="font-mono text-[11px] px-3 py-1 rounded-full border border-line text-paper-dim"
+                    >
+                      {s}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}

@@ -23,7 +23,7 @@ export default function StatusBar() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-16 py-2 border-b border-line bg-ink/80 backdrop-blur-sm font-mono text-[11px] text-paper-dim">
+    <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-3 md:px-16 py-2 border-b border-line bg-ink/80 backdrop-blur-sm font-mono text-[10px] md:text-[11px] text-paper-dim">
       <div className="flex items-center gap-4">
         <span className="flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-signal animate-pulse" />

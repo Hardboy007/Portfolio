@@ -8,6 +8,7 @@ export default function Cursor() {
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) return;
     const dot = dotRef.current;
     const ring = ringRef.current;
     if (!dot || !ring) return;
@@ -35,12 +36,20 @@ export default function Cursor() {
     };
 
     const onEnterLink = () => {
-      gsap.to(ring, { scale: 2.2, borderColor: "var(--color-signal)", duration: 0.3 });
+      gsap.to(ring, {
+        scale: 2.2,
+        borderColor: "var(--color-signal)",
+        duration: 0.3,
+      });
       gsap.to(dot, { scale: 0, duration: 0.3 });
     };
 
     const onLeaveLink = () => {
-      gsap.to(ring, { scale: 1, borderColor: "var(--color-signal)", duration: 0.3 });
+      gsap.to(ring, {
+        scale: 1,
+        borderColor: "var(--color-signal)",
+        duration: 0.3,
+      });
       gsap.to(dot, { scale: 1, duration: 0.3 });
     };
 
@@ -63,15 +72,13 @@ export default function Cursor() {
 
   return (
     <>
-      {/* dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-signal pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2"
+        className="hidden md:block fixed top-0 left-0 w-2 h-2 rounded-full bg-signal pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2"
       />
-      {/* ring */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-signal pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2 opacity-70"
+        className="hidden md:block fixed top-0 left-0 w-8 h-8 rounded-full border border-signal pointer-events-none z-[99999] -translate-x-1/2 -translate-y-1/2 opacity-70"
       />
     </>
   );

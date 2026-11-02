@@ -12,7 +12,10 @@ const SHORTCUTS = [
     key: "L",
     label: "LinkedIn",
     action: () =>
-      window.open("https://www.linkedin.com/in/hardik-srivastava033/", "_blank"),
+      window.open(
+        "https://www.linkedin.com/in/hardik-srivastava033/",
+        "_blank",
+      ),
   },
   {
     key: "R",
@@ -58,7 +61,7 @@ export default function KeyboardShortcuts() {
   return (
     <>
       {/* hint */}
-      <div className="fixed bottom-6 right-6 z-40 font-mono text-[11px] text-paper-dim border border-line bg-ink-soft/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
+      <div className="hidden md:block fixed bottom-6 right-6 z-40 font-mono text-[11px] text-paper-dim border border-line bg-ink-soft/80 backdrop-blur-sm px-3 py-1.5 rounded-full">
         press <span className="text-signal">?</span> for shortcuts
       </div>
 

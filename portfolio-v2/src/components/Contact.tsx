@@ -118,7 +118,7 @@ export default function Contact() {
             <div className="overflow-hidden">
               <h2
                 ref={headingRef}
-                className="font-display font-semibold text-3xl md:text-5xl text-paper leading-[1.1]"
+                className="font-display font-semibold text-2xl md:text-5xl text-paper leading-[1.1]"
               >
                 Let's build something real together.
               </h2>
