@@ -218,7 +218,7 @@ export default function Hero() {
         {/* RIGHT: illustration */}
         <div
           ref={visualRef}
-          className="hidden md:block relative mx-auto md:mx-0 w-full max-w-md aspect-square"
+          className="block relative mx-auto w-full max-w-xs md:max-w-md aspect-square mt-8 md:mt-0"
         >
           <svg
             ref={orbitRef}
