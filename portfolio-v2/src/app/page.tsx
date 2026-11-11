@@ -10,12 +10,14 @@ import TechArsenal from "@/components/TechArsenal";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
 import KeyboardShortcuts from "@/components/KeyboardShortcuts";
 
 export default function Home() {
   return (
     <>
       <Cursor />
+      <ScrollProgress />
       <KeyboardShortcuts />
       <Loader />
       <SmoothScroll>
