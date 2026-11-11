@@ -99,7 +99,7 @@ export default function Navbar() {
             </button>
           ))}
           <button
-            onClick={() => window.open("https://drive.google.com/file/d/1cnMchFarxvXxXSopvSlNlnfznB8lBmW9/view?usp=drive_link", "_blank")}
+            onClick={() => window.open("/Hardik_Resume.pdf", "_blank")}
             className="font-mono text-xs px-4 py-2 rounded-full border border-signal text-signal w-fit"
           >
             Resume ↗

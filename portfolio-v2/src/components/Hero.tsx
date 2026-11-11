@@ -205,7 +205,7 @@ export default function Hero() {
               className="px-6 py-3 rounded-full border border-line text-paper font-mono text-sm font-medium"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1cnMchFarxvXxXSopvSlNlnfznB8lBmW9/view?usp=drive_link",
+                  "/Hardik_Resume.pdf",
                   "_blank",
                 )
               }
